@@ -1,8 +1,8 @@
-import { API_KEY, endpoint, country } from '../config/api';
+import { API_KEY, ENDPOINT, COUNTRY } from '@env';
 
 export async function getArticles(category = 'general') {
   const response = await fetch(
-    `${endpoint}?country=${country}&category=${category}`,
+    `${ENDPOINT}?country=${COUNTRY}&category=${category}`,
     {
       headers: {
         'X-API-Key': API_KEY

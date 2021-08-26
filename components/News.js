@@ -9,6 +9,8 @@ import { useGetArticles } from '../hooks/articles';
 export default function News({ category }) {
   const articles = useGetArticles(category);
 
+  console.log('News - articles => ', articles);
+
   return (
     <NativeBaseProvider>
       <ScrollView height={850}>
