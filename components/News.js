@@ -16,7 +16,7 @@ export default function News({ category }) {
           <FlatList
             data={articles}
             renderItem={({ item }) => (
-              <View>
+              <>
                 <View style={styles.newsContainer}>
                   <Image
                     width={550}
@@ -32,7 +32,7 @@ export default function News({ category }) {
                   <Text style={styles.newsDescription}>{item.description}</Text>
                 </View>
                 <Divider my={2} bg="#e0e0e0" />
-              </View>
+              </>
             )}
             keyExtractor={({ url }) => url}
           />
@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 18,
     marginTop: 10,
-    fontWeight: 600
+    fontWeight: '600'
   },
   newsDescription: {
     fontSize: 16,
